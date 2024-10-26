@@ -30,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="email" name="email" placeholder="E-mail" required>
         <button type="submit">S'inscrire</button>
     </form>
+    <span>Déjà un compte ? <a href="./login.php">Se connecter</a></span>
 </body>
 
 </html>
