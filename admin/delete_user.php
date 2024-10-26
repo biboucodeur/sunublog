@@ -8,10 +8,10 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 }
 
 if (isset($_GET['id'])) {
-    deleteArticle($_GET['id']); // Implémentez cette fonction pour supprimer l'article
-    header("Location: approve_article.php"); // Redirection après suppression
+    deleteUser($_GET['id']); // Implémentez cette fonction pour supprimer l'utilisateur
+    header("Location: manage_users.php");
     exit();
 } else {
-    header("Location: approve_article.php");
+    header("Location: manage_users.php");
     exit();
 }
