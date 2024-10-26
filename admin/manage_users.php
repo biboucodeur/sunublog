@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     exit();
 }
 
-$users = getAllUsers(); // Assurez-vous d'implémenter cette fonction
+$users = getAllUsers(); // Récupération de tous les utilisateurs
 ?>
 
 <!DOCTYPE html>
@@ -29,9 +29,9 @@ $users = getAllUsers(); // Assurez-vous d'implémenter cette fonction
         </tr>
         <?php foreach ($users as $user): ?>
             <tr>
-                <td><?php echo $user['username']; ?></td>
-                <td><?php echo $user['email']; ?></td>
-                <td><?php echo $user['role']; ?></td>
+                <td><?php echo htmlspecialchars($user['username']); ?></td>
+                <td><?php echo htmlspecialchars($user['email']); ?></td>
+                <td><?php echo htmlspecialchars($user['role']); ?></td>
                 <td>
                     <a href="edit_user.php?id=<?php echo $user['id']; ?>">Modifier</a>
                     <a href="delete_user.php?id=<?php echo $user['id']; ?>">Supprimer</a>

@@ -56,6 +56,16 @@ function getAllArticles()
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
+function getAllUsers()
+{
+    global $pdo;
+
+    $sql = "SELECT * FROM users"; // Vous pouvez ajuster cette requête selon vos besoins
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
 function getPendingArticles()
 {
@@ -76,6 +86,16 @@ function getArticleById($id)
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
+function getUserById($id)
+{
+    global $pdo;
+
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE id = :id");
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
 
 function updateArticle($id, $title, $image, $content)
 {
@@ -87,6 +107,19 @@ function updateArticle($id, $title, $image, $content)
     $stmt->bindParam(':id', $id);
     return $stmt->execute();
 }
+function updateUser($id, $username, $email, $role)
+{
+    global $pdo;
+
+    $stmt = $pdo->prepare("UPDATE users SET username = :username, email = :email, role = :role WHERE id = :id");
+    $stmt->bindParam(':username', $username);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':role', $role);
+    $stmt->bindParam(':id', $id);
+
+    return $stmt->execute();
+}
+
 function approveArticle($id)
 {
     global $pdo;

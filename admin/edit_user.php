@@ -12,14 +12,14 @@ if (!isset($_GET['id'])) {
     exit();
 }
 
-$user = getUserById($_GET['id']); // Implémentez cette fonction pour récupérer l'utilisateur par ID
+$user = getUserById($_GET['id']); // Récupérer l'utilisateur par ID
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $role = $_POST['role']; // 'user' ou 'admin'
 
-    if (updateUser($user['id'], $username, $email, $role)) { // Implémentez updateUser
+    if (updateUser($user['id'], $username, $email, $role)) { // Mettre à jour l'utilisateur
         echo "Utilisateur modifié avec succès !";
     } else {
         echo "Erreur lors de la modification de l'utilisateur.";
@@ -36,10 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
-    <h2>Modifier l'utilisateur : <?php echo $user['username']; ?></h2>
+    <h2>Modifier l'utilisateur : <?php echo htmlspecialchars($user['username']); ?></h2>
     <form method="POST" action="">
-        <input type="text" name="username" value="<?php echo $user['username']; ?>" required>
-        <input type="email" name="email" value="<?php echo $user['email']; ?>" required>
+        <input type="text" name="username" value="<?php echo htmlspecialchars($user['username']); ?>" required>
+        <input type="email" name="email" value="<?php echo htmlspecialchars($user['email']); ?>" required>
         <select name="role" required>
             <option value="user" <?php if ($user['role'] === 'user') echo 'selected'; ?>>Utilisateur</option>
             <option value="admin" <?php if ($user['role'] === 'admin') echo 'selected'; ?>>Administrateur</option>
