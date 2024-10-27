@@ -9,7 +9,76 @@ $articles = getAllArticles();
 <head>
     <meta charset="UTF-8">
     <title>Blog Platform</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Styles de base pour le corps */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Styles de l'en-tête */
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Styles du contenu principal */
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Styles pour chaque article */
+        article {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+
+        article h3 {
+            margin-bottom: 10px;
+
+        }
+
+        article img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        article p {
+            margin: 10px 0;
+        }
+    </style>
 </head>
 
 <body>
