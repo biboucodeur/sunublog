@@ -15,6 +15,9 @@ require_once '../includes/functions.php';
 <head>
     <meta charset="UTF-8">
     <title>Tableau de bord Administrateur</title>
+    <style>
+        
+    </style>
 </head>
 
 <body>
