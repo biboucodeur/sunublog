@@ -54,11 +54,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         /* Styles pour le formulaire */
         input {
-            width: 100%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ddd;
             border-radius: 5px;
+            display: block;
+            width: 95%;
         }
 
         button {

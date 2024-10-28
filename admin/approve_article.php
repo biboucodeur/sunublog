@@ -15,6 +15,56 @@ $articles = getPendingArticles(); // Créez cette fonction pour récupérer les 
 <head>
     <meta charset="UTF-8">
     <title>Approuver les articles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            padding: 5px 10px;
+            border: 1px solid #4CAF50;
+            border-radius: 4px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -35,7 +85,8 @@ $articles = getPendingArticles(); // Créez cette fonction pour récupérer les 
                 </td>
             </tr>
         <?php endforeach; ?>
-    </table>
+    </table><br>
+    <a href="./dashboard.php">Tableau de bord</a>
 </body>
 
 </html>
