@@ -8,7 +8,7 @@ $articles = getAllArticles();
 
 <head>
     <meta charset="UTF-8">
-    <title>Blog Platform</title>
+    <title>Blog </title>
     <style>
         /* Styles de base pour le corps */
         body {
