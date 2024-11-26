@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <head>
     <meta charset="UTF-8">
-    <title>Inscription</title>
+    <title>Register</title>
     <style>
         /* Styles de base pour le corps */
         body {
