@@ -26,7 +26,7 @@ if (!$article) {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             background-color: #f4f4f4;
-            color: #333;
+            color: #444;
         }
 
         /* Styles pour l'en-tête de l'article */
