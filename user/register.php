@@ -21,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <title>Register</title>
     <style>
-        /* Styles de base pour le corps */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
