@@ -6,7 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Utilisez la fonction 'login' à la place de 'loginUser'
     $user = login($username, $password);
     if ($user) {
         $_SESSION['user_id'] = $user['id'];
